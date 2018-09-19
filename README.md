@@ -14,5 +14,7 @@ Para reproducir la base de datos localmente después de clonar el proyecto:
 Notas
 
 Passport.js es el *middleware* para la autenticación.
+
 El paquete *zxcvbn* ayuda validar que el *password* sea seguro.
+
 La función para generar el *password* del sistema está en el archivo models/User.js
