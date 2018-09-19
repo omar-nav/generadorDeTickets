@@ -1,16 +1,16 @@
 <h1>registra nuevo usuario</h1>
 <form action="/addUser" method="POST">
   <p>
-    nombre de usuario:
-    <input type="text" name="username" value="{{userinput.username}}" required>
+    <label for="username">Escribe el nombre de usuario</label>
+    <input type="text" name="username" id="username" value="{{userinput.username}}">
   </p>
   <p>
-    email:
-    <input type="email" name="email" value="{{userinput.email}}" required>
+    <label for="password">Escribe una contraseña segura</label>
+    <input type="password" name="password" id="password" value="{{userinput.password}}">
   </p>
   <p>
-    contraseña:
-    <input type="password" name="password" value="{{userinput.password}}" required>
+    <label for="password2">Repite la contraseña</label>
+    <input type="password" name="password2" id="password2" value="{{userinput.password2}}">
   </p>
   <input type="submit" value="agregar usuario">
 </form>
