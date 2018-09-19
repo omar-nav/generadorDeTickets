@@ -26,8 +26,8 @@ const userSchema = new Schema({
   role: {
     type: String,
     enum: ['projectManager', 'employee', 'client']
-  }
-  // systemPassword: { type: String, default: passwordGenerator() }
+  },
+  systemPassword: { type: String, default: passwordGenerator() }
 }, {
     timestamps: {
       createdAt: 'created_at',
@@ -35,5 +35,5 @@ const userSchema = new Schema({
     }
   })
 
-userSchema.plugin(PLM, { usernameField: 'email' })
+userSchema.plugin(PLM, { usernameField: 'username' })
 module.exports = mongoose.model('User', userSchema)
