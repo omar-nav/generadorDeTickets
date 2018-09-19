@@ -13,6 +13,7 @@ Para reproducir la base de datos localmente después de clonar el proyecto:
 
 
 Notas
+
 Sólo empleados y gerentes pueden ver el listado interno.
 
 El listado público es para clientes pero todos los usuarios tienen acceso. 
