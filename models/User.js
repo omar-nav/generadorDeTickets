@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const PLM = require('passport-local-mongoose')
 
-// let finalString = String;
+let finalString = String;
 function passwordGenerator() {
   // 25 element locations including 0
   let letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -19,7 +19,7 @@ function passwordGenerator() {
   let finalString = x1 + x2 + '-' + y1 + y2;
   return finalString;
 }
-
+finalString = passwordGenerator();
 const userSchema = new Schema({
   username: String,
   email: String,
@@ -27,7 +27,7 @@ const userSchema = new Schema({
     type: String,
     enum: ['projectManager', 'employee', 'client']
   },
-  systemPassword: { type: String, default: passwordGenerator() }
+  systemPassword: { type: String, default: finalString }
 }, {
     timestamps: {
       createdAt: 'created_at',
