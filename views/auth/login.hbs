@@ -2,16 +2,18 @@
 <form action="/login" method="POST">
   <p>
     username:
-    <input type="text" name="username" required>
+    <input type="text" name="username" id="username" required>
   </p>
   <p>
     email:
-    <input type="email" name="email" required>
+    <input type="email" name="email" id="email" required>
   </p>
   <p>
     password:
-    <input type="password" name="password">
+    <input type="password" name="password" id="password">
   </p>
 
   <input type="submit" value="login">
 </form>
+<p><a href="/addUser">agregar nuevo usuario</a></p>
+<p>{{error}}</p>

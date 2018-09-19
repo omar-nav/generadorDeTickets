@@ -2,16 +2,20 @@
 <form action="/addUser" method="POST">
   <p>
     nombre de usuario:
-    <input type="text" name="username" required>
+    <input type="text" name="username" value="{{userinput.username}}" required>
   </p>
   <p>
     email:
-    <input type="email" name="email" required>
+    <input type="email" name="email" value="{{userinput.email}}" required>
   </p>
   <p>
     contraseña:
-    <input type="password" name="password" required>
+    <input type="password" name="password" value="{{userinput.password}}" required>
   </p>
   <input type="submit" value="agregar usuario">
 </form>
 <a href="/list">ver lista de usuarios</a>
+<p>{{error}}</p>
+<p>{{error.errmsg}}</p>
+<p>{{warning}}</p>
+<p>{{suggestions.[0]}}</p>
