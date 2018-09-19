@@ -32,9 +32,16 @@ router.post('/addUser', (req, res, next) => {
   if (password !== password2) return res.render('auth/addUser', { error: 'Confirme que las contraseñas son iguales' })
   if (zxcvbn(password).score <= 1) return res.render('auth/addUser', zxcvbn(password).feedback)
   User.register(req.body, req.body.password)
-    .then(user => res.redirect('/login'))
+    .then(user => res.redirect('/intermediary'))
     .catch(error => next(error))
 })
+// intermediary page to store in database
+router.get('/intermediary', (req, res, next) => {
+  User.find().then(users => {
+    res.render('auth/intermediary', { users })
+  })
+})
+
 // login
 router.get('/login', (req, res, next) => {
   res.render('auth/login')
@@ -57,4 +64,12 @@ router.get('/listInternal', checkRole('projectManager', 'employee'), (req, res, 
   })
 })
 
+// show unique system password page
+router.get('/showSystemPassword/:id', (req, res, next) => {
+  const { id } = req.params
+  User.findById(id)
+    .then(users => {
+      res.render('auth/showSystemPassword', { users })
+    })
+})
 module.exports = router

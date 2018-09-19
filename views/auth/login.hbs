@@ -4,10 +4,6 @@
     nombre de usuario:
     <input type="text" name="username" id="username" required>
   </p>
-  {{!-- <p>
-    email:
-    <input type="email" name="email" id="email">
-  </p> --}}
   <p>
     contraseña generado por el usuario:
     <input type="password" name="password" id="password" required>
@@ -20,8 +16,8 @@
   <input type="submit" value="login">
 </form>
 
-<p>Si está en sesión y es empleado puede ver el <a href="/listInternal">listado interno de empleados y clientes</a></p>
-<p>Si está en sesión y es cliente puede ver el <a href="/listExternal">listado publico de empleados y clientes</a></p>
+<p>Si estás en sesión y eres empleado puedes ver el <a href="/listInternal">listado interno</a> de empleados y clientes</p>
+<p>Si estás en sesión y eres cliente puedes ver el <a href="/listExternal">listado público</a> de empleados y clientes</p>
 
-<p><a href="/addUser">agregar nuevo usuario</a></p>
+<p><a href="/addUser">agrega nuevo usuario</a></p>
 <p>{{error}}</p>
