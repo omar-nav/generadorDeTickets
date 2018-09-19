@@ -1,0 +1,12 @@
+<h1>el listado de usuarios</h1>
+<div>
+  {{#each users}}
+  <p>
+    {{this.username}}
+  </p>
+  <p>
+    {{this.role}}
+  </p>
+  {{/each}}
+</div>
+{{!-- <a href="/addUser">registra otro usuario</a> --}}

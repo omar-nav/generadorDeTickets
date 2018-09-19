@@ -1,19 +1,27 @@
 <h1>iniciar sesión</h1>
 <form action="/login" method="POST">
   <p>
-    username:
+    nombre de usuario:
     <input type="text" name="username" id="username" required>
   </p>
   <p>
     email:
-    <input type="email" name="email" id="email" required>
+    <input type="email" name="email" id="email">
   </p>
   <p>
-    password:
-    <input type="password" name="password" id="password">
+    contraseña generado por el usuario:
+    <input type="password" name="password" id="password" required>
   </p>
+  {{!-- <p>
+    contraseña generado por el sistema:
+    <input type="password" name="systemPassword" id="systemPassword" required>
+  </p> --}}
 
   <input type="submit" value="login">
 </form>
+
+<p>Si está en sesión y es empleado puede ver el <a href="/listInternal">listado interno de empleados y clientes</a></p>
+<p>Si está en sesión y es cliente puede ver el <a href="/listExternal">listado publico de empleados y clientes</a></p>
+
 <p><a href="/addUser">agregar nuevo usuario</a></p>
 <p>{{error}}</p>
