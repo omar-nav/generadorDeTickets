@@ -2,6 +2,7 @@ const router = require('express').Router()
 const User = require('../models/User')
 const passport = require('passport')
 const zxcvbn = require('zxcvbn')
+//const translate = require('translate')
 
 // add user
 router.get('/addUser', (req, res, next) => {
@@ -10,7 +11,7 @@ router.get('/addUser', (req, res, next) => {
 router.post('/addUser', (req, res, next) => {
   const { password, password2 } = req.body
 
-  if (password !== password2) return res.render('auth/addUser', { error: 'Confirma que las contraseñas son iguales' })
+  if (password !== password2) return res.render('auth/addUser', { error: 'Confirme que las contraseñas son iguales' })
   if (zxcvbn(password).score <= 1) return res.render('auth/addUser', zxcvbn(password).feedback)
 
   User.register(req.body, req.body.password)

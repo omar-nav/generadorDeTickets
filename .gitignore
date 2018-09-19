@@ -1,5 +1,9 @@
 # Dependency directory
-node_modules
+node_modules 
+
+# keep translated feedback within subdirectory
+!.gitignore
+!*/node_modules/zxcvbn/lib/feedback.js
 
 # Debug log from npm
 npm-debug.log
