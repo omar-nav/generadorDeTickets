@@ -1,4 +1,4 @@
-# generadorDeTickets
+# generador de tickets
 Para reproducir la base de datos localmente después de clonar el proyecto:
 
 1) Ejecuta el comando `npm i` en la terminal desde la carpeta del proyecto para instalar los módulos requeridos.
