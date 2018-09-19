@@ -39,7 +39,7 @@ router.post('/addUser', (req, res, next) => {
 router.get('/login', (req, res, next) => {
   res.render('auth/login')
 })
-router.post('/login', passport.authenticate('local'), (req, res, next) => {
+router.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), (req, res, next) => {
   res.redirect('/listExternal')
 })
 
