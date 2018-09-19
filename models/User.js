@@ -19,11 +19,11 @@ function passwordGenerator() {
   let finalString = x1 + x2 + '-' + y1 + y2;
   return finalString;
 }
-passwordGenerator();
+
 const userSchema = new Schema({
   username: String,
   email: String,
-  systemPassword: String = finalString
+  systemPassword: { type: String, default: passwordGenerator() }
 }, {
     timestamps: {
       createdAt: 'created_at',
