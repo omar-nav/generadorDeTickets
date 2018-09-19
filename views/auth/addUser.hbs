@@ -1,0 +1,17 @@
+<h1>registra nuevo usuario</h1>
+<form action="/addUser" method="POST">
+  <p>
+    nombre de usuario:
+    <input type="text" name="username" required>
+  </p>
+  <p>
+    email:
+    <input type="email" name="email" required>
+  </p>
+  <p>
+    contraseña:
+    <input type="password" name="password" required>
+  </p>
+  <input type="submit" value="agregar usuario">
+</form>
+<a href="/list">ver lista de usuarios</a>
