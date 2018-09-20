@@ -50,4 +50,9 @@ div {
   background: white;
   font-weight: 800; }
 
+.username {
+  color: #0b4372;
+  background-color: transparent;
+  display: inline; }
+
 /*# sourceMappingURL=style.css.map */
