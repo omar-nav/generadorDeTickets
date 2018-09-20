@@ -1,4 +1,5 @@
-<h1>iniciar sesión</h1>
+<h1>generador de tickets</h1>
+<h2>iniciar sesión</h2>
 <form action="/login" method="POST">
   <p>
     nombre de usuario:
@@ -13,11 +14,12 @@
     <input type="password" name="systemPassword" id="systemPassword" required>
   </p>
 
-  <input type="submit" value="login">
+  <input type="submit" value="iniciar sesión">
 </form>
 
-<p>Si estás en sesión y eres empleado puedes ver el <a href="/listInternal">listado interno</a> de empleados y clientes</p>
-<p>Si estás en sesión y eres cliente puedes ver el <a href="/listExternal">listado público</a> de empleados y clientes</p>
-
-<p><a href="/addUser">agrega nuevo usuario</a></p>
-<p>{{error}}</p>
+<p>Si estás en sesión y eres empleado puedes ver el listado interno de empleados y clientes</p>
+<p>Si estás en sesión y eres cliente puedes ver el listado público de empleados y clientes</p>
+<button onclick="window.location.href='/addUser'"> agrega nuevo usuario </button>
+<div class="error">
+  <p>{{error}}</p>
+</div>

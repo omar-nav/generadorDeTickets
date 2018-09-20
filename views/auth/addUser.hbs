@@ -1,4 +1,4 @@
-<h1>registra nuevo usuario</h1>
+<h1>registra un nuevo usuario</h1>
 <form action="/addUser" method="POST">
   <p>
     <label for="username">Escribe el nombre de usuario</label>
@@ -8,8 +8,8 @@
     <label for="email">Escribe el mail</label>
     <input type="email" name="email" id="email">
   </p>
-  <p>
-    role:
+  <p class="radioOptions">
+    rol:
     <br>
     <input type="radio" name="role" value="client">cliente<br>
     <input type="radio" name="role" value="employee">empleado<br>
@@ -23,14 +23,14 @@
     <label for="password2">Repite la contraseña</label>
     <input type="password" name="password2" id="password2">
   </p>
-  <input type="submit" value="agregar usuario">
+  <input type="submit" value="agrega nuevo usuario">
 </form>
-<p><a href="/login">inicia sesión</a></p>
-
+<button onclick="window.location.href='/login'"> inicia sesión </button>
 <p>Si estás en sesión y eres empleado puedes ver el <a href="/listInternal">listado interno</a> de empleados y clientes</p>
 <p>Si estás en sesión y eres cliente puedes ver el <a href="/listExternal">listado público</a> de empleados y clientes</p>
-
-<p>{{error}}</p>
-<p>{{error.errmsg}}</p>
-<p>{{warning}}</p>
-<p>{{suggestions.[0]}}</p>
+<div class="error">
+  <p>{{error}}</p>
+  <p>{{error.errmsg}}</p>
+  <p>{{warning}}</p>
+  <p>{{suggestions.[0]}}</p>
+</div>
