@@ -12,7 +12,7 @@ Para reproducir la base de datos localmente después de clonar el proyecto:
 6) En el navegador entra *http://localhost:3000/addUser*
 
 
-Notas
+**Notas**
 
 Sólo empleados y gerentes pueden ver el listado interno.
 
